@@ -1,16 +1,16 @@
 # Assignment1 - Python Robotics Simulator
-
+-----------------------------
 This is a simple, portable robot simulator developed by [Student Robotics](https://studentrobotics.org).
 Some of the arenas and the exercises have been modified for the Research Track I course
 
 Installing and running
-----------------------
+-----------------------------
 
 The simulator requires a Python 2.7 installation, the [pygame](http://pygame.org/) library, [PyPyBox2D](https://pypi.python.org/pypi/pypybox2d/2.1-r331), and [PyYAML](https://pypi.python.org/pypi/PyYAML/).
 
 
 ## Troubleshooting
-
+-----------------------------
 When running `python run.py <file>`, you may be presented with an error: `ImportError: No module named 'robot'`. This may be due to a conflict between sr.tools and sr.robot. To resolve, symlink simulator/sr/robot to the location of sr.tools.
 
 On Ubuntu, this can be accomplished by:
@@ -34,12 +34,12 @@ The aim of this first assignment is to drive the robot around the circuit in the
 
 
 Robot API
----------
+-----------------------------
 
 The API for controlling a simulated robot is designed to be as similar as possible to the [SR API][sr-api].
 
 ### Motors ###
-
+-----------------------------
 The simulated robot has two motors configured for skid steering, connected to a two-output [Motor Board](https://studentrobotics.org/docs/kit/motor_board). The left motor is connected to output `0` and the right motor to output `1`.
 
 The Motor Board API is identical to [that of the SR API](https://studentrobotics.org/docs/programming/sr/motors/), except that motor boards cannot be addressed by serial number. So, to turn on the spot at one quarter of full power, one might write the following:
@@ -50,7 +50,7 @@ R.motors[0].m1.power = -25
 ```
 
 ### The Grabber ###
-
+-----------------------------
 The robot is equipped with a grabber, capable of picking up a token which is in front of the robot and within 0.4 metres of the robot's centre. To pick up a token, call the `R.grab` method:
 
 ```python
@@ -64,7 +64,7 @@ To drop the token, call the `R.release` method.
 Cable-tie flails are not implemented.
 
 ### Vision ###
-
+-----------------------------
 To help the robot find tokens and navigate, each token has markers stuck to it, as does each wall. The `R.see` method returns a list of all the markers the robot can see, as `Marker` objects. The robot can only see markers which it is facing towards.
 
 Each `Marker` object has the following attributes:
@@ -98,6 +98,7 @@ for m in markers:
 [sr-api]: https://studentrobotics.org/docs/programming/sr/
 
 ### How to detect silver token? ###
+-----------------------------
 The first problem to solve was the fact that the robot, having a complete view (-180 degrees to 180 degrees), used to go back to grab the silver box already taken (if closer).
 So to get around this problem, I have reduced the robot's search view for silver boxes to 120 degrees (-60 degrees to 60 degrees). 
 In this way the robot can only detect the silver box in front of it. 
@@ -112,6 +113,7 @@ for token in R.see():
 ```
 
 ### Explanetion of `function_control_boundaries(rot_y)` ###
+-----------------------------
 This function was created for avoiding that the robot could turn itself in the worst direction. 
 In fact this function takes into consideration two situations in which the robot might find itself, relative to the angles of the path.
 To explain how it works, I report below an image:
@@ -133,6 +135,7 @@ Below the code written:
 
 ```
 So, in this way, the robot always turns in the correct direction and avoids going back.
+
 ### PSEUDO-CODE: ###
 -----------------------------
 In the code `assignment1.py` you can find an infinite while loops, within which there are different sections, which are explained below:
