@@ -26,12 +26,11 @@ $ python run.py assignment1.py
 ```
 
 ## Assignment1's aim: ##
------------------------------
+
 The aim of this first assignment is to drive the robot around the circuit in the counter-clockwise direction avoiding to touch the golden boxes, and to grab silver box when the robot is close to it and move it behind itself.
 
 
-Robot API
------------------------------
+## Robot API
 
 The API for controlling a simulated robot is designed to be as similar as possible to the [SR API][sr-api].
 
