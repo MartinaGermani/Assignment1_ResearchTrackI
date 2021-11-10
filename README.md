@@ -219,7 +219,7 @@ IF A SILVER BOX IS CLOSER AND THE ROBOT IS WELL ALIGNED WITH IT, THEN:
 		 	SILVER=TRUE
 
 
-### 3. elif -a_th<= rot_y_silver <= a_th: ###
+### 3. if -a_th<= rot_y_silver <= a_th: ###
 -----------------------------
 IF the robot is well aligned with the token AND there is not golden token between the robot and the silver token, then:
 
@@ -243,7 +243,7 @@ IF the robot is well aligned with the token AND there is not golden token betwee
        	CONTROL THE NEAREST SILVER BOX AND THE NEAREST GOLDEN BOXES AROUND AND IN FRONT OF IT
 
 
-### 4. elif rot_y_silver < -a_th and dist_gold_amoung>d_th: ###
+### 4. if rot_y_silver < -a_th and dist_gold_amoung>d_th: ###
 -----------------------------
 IF the robot is NOT well aligned with the silver token (in particular the silver token in on the LEFT with respect to the robot), THEN:
 	
@@ -258,7 +258,7 @@ IF the robot is NOT well aligned with the silver token (in particular the silver
 			 	THE ROBOT TURNS LEFT
 
 
-### 5. elif rot_y_silver > a_th and dist_gold_amoung>d_th: ###
+### 5. if rot_y_silver > a_th and dist_gold_amoung>d_th: ###
 -----------------------------
 IF the robot is not well aligned with the silver token (in particular the silver token in on the RIGHT with respect to the robot), THEN:
 
