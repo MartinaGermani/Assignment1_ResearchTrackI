@@ -3,13 +3,12 @@ This is a simple, portable robot simulator developed by [Student Robotics](https
 Some of the arenas and the exercises have been modified for the Research Track I course
 
 ## Installing and running
------------------------------
 
 The simulator requires a Python 2.7 installation, the [pygame](http://pygame.org/) library, [PyPyBox2D](https://pypi.python.org/pypi/pypybox2d/2.1-r331), and [PyYAML](https://pypi.python.org/pypi/PyYAML/).
 
 
 ## Troubleshooting
------------------------------
+
 When running `python run.py <file>`, you may be presented with an error: `ImportError: No module named 'robot'`. This may be due to a conflict between sr.tools and sr.robot. To resolve, symlink simulator/sr/robot to the location of sr.tools.
 
 On Ubuntu, this can be accomplished by:
@@ -18,7 +17,6 @@ On Ubuntu, this can be accomplished by:
 * Create symlink: `ln -s path/to/simulator/sr/robot /usr/local/lib/python2.7/dist-packages/sr/`
 
 ## How to run: 
------------------------------
 
 To run one or more scripts in the simulator, use `run.py`, passing it the file names: 
 
