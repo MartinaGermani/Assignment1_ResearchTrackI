@@ -122,11 +122,11 @@ On the other hand, if the angle between the robot and the golden token is includ
 Below the code written:
 ```python
 	if 60<rot_y<180:
-		print("angolo, giro a sinistra!")
+		print("angle, turn left")
 		turn(-2,3)
 		
 	elif -180<rot_y<-60:
-		print("angolo, giro a destra!") 
+		print("angle, turn right")
 		turn(2,3)
 
 ```
