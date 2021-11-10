@@ -116,7 +116,7 @@ This function was created for avoiding that the robot could turn itself in the w
 In fact this function takes into consideration two situations in which the robot might find itself, relative to the angles of the path.
 To explain how it works, I report below an image:
 
-![alt text](https://github.com/[MartinaGermani]/[Assignment1_ResearchTrackI]/blob/imm.jpg?raw=true)
+![alt text](https://github.com/[MartinaGermani]/[Assignment1_ResearchTrackI]/imm.jpg?raw=true)
 
 As you can see, if the angle between the robot and the golden token is included between 60 degrees to 180 degrees, it means that the robot is in the first situation, and so it must turn left.
 On the other hand, if the angle between the robot and the golden token is included between -180 degrees to -60 degrees, it means that the robot is in the second situation, and so it must turn right.
