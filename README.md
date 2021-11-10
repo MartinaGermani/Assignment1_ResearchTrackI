@@ -233,11 +233,11 @@ IF the robot is well aligned with the token AND there is not golden token betwee
        2. WHILE the silver token is not closer AND there is a golden box between the robot and the silver token, then:
        	CALLING `aligned_but(rot_y_amoung)` function, WHERE:
        		IF the nearest golden token is at left, then:
-			THE ROBOT GOES A LITTLE BACK  
+			THE ROBOT GOES A LITTLE BACK
        			THE ROBOT TURNS RIGHT
 			THE ROBOT GOES ON
        		ELIF the nearest golden token is at right, then:
-			THE ROBOT GOES A LITTLE BACK  
+			THE ROBOT GOES A LITTLE BACK
        			THE ROBOT TURNS LEFT
 			THE ROBOT GOES ON
        		ELIF the robot is well aligned with the nearest golden token, then:
