@@ -138,7 +138,7 @@ In the code `assignment1.py` you can find an infinite while loops, within which 
 
 ### 1. if dist_silver==-1: ###
 -----------------------------
-CALLING THE `find_silver_token` function
+CALLING THE `find_silver_token` function  
 IF NO SILVER TOKEN IS DETECTED, THEN the robot has to move around the arena in search of one of them, SO:
 
 	CALLING THE `function_control_boundaries(rot_y_gold)`, WHERE:
