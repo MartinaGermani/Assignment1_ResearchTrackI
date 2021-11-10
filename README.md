@@ -24,6 +24,7 @@ To run one or more scripts in the simulator, use `run.py`, passing it the file n
 ```bash
 $ python run.py assignment1.py
 ```
+The file "assignment1.py" is in "robot-sim"
 
 ## Assignment1's aim: ##
 
